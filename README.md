@@ -21,14 +21,14 @@ Project website: using laravel for creating this form website with purposing cre
 
 # Demo
 - Register Successfully: <br />
-![register success](./Gif/InsertSuccessfully_Demo.gif) 
-<br />
+![register success](./Gif/InsertSuccessfully_Demo.gif)
+
 - Validate in Register: <br />
 ![Validation value, exclude Gender fields](./Gif/ValidationForm_Demo.gif)
-<br />
+
 - Validate Gender fields: <br />
 ![Validate Gender](./Gif/EmptyGenderField_Demo.gif)
-<br />
+
 - Reset all fields value: <br />
 ![Reset all values](./Gif/ResetAllValue_Demo.gif)
 
