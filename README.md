@@ -7,7 +7,7 @@ Update: 14:38 (GMT +7) 08/08/2023
 * [Technologies](#technologies)
 * [Feature](#feature)
 * [Demo](#demo)
-* [Update] (#update)
+* [Update](#update)
 
 # General info
 - This is from job's request
