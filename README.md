@@ -1,11 +1,13 @@
 # Description
 Project website: using laravel for creating this form website with purposing create new donation register
+Update: 14:38 (GMT +7) 08/08/2023
 
 # Index content
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Feature](#feature)
 * [Demo](#demo)
+* [Update] (#update)
 
 # General info
 - This is from job's request
@@ -32,3 +34,11 @@ Project website: using laravel for creating this form website with purposing cre
 - Reset all fields value: <br />
 ![Reset all values](./Gif/ResetAllValue_Demo.gif)
 
+# Update
+- Add alot of logic for check validate data in client side.
+- Because this project has css file inside, import boostrap css will make a conflict with css style => Error message just plain <p> tag
+- Check all validate value: <br />
+![Check all value](./Gif/Validate_All.gif)
+
+- Check valid for cardnumber: <br />
+![Check valid for Card number](./Gif/VisaMasterAmex.gif)
