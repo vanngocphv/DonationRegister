@@ -10,14 +10,15 @@
                 <img src="img/bg.jpeg" alt="">
             </div>
             <div class="signup-form">
-                <form method="POST" action="/form/register" class="register-form" id="register-form">
+                <form method="POST" action="/form/register" class="register-form need-validation" id="register-form" novalidate>
                     @csrf
                     <div class="form-row">
                         <div class="form-group">
                             <div class="form-input">
                                 <label for="first_name" class="required">First name</label>
-                                <input type="text" name="first_name" id="first_name" placeholder="Ex: John..." required />
-
+                                <input type="text" name="first_name" id="first_name" placeholder="Ex: John..." minlength="3" maxlength="15" pattern=".{3,15}" required />
+                                
+                                <p id="invalid_FirstName" style="color: red"></p>
                                 @error('first_name')
                                     <p style="color: red">{{$message}}</p>
                                 @enderror
@@ -25,8 +26,9 @@
                             </div>
                             <div class="form-input">
                                 <label for="last_name" class="required">Last name</label>
-                                <input type="text" name="last_name" id="last_name" placeholder="Ex: Doe..." required />
-
+                                <input type="text" name="last_name" id="last_name" placeholder="Ex: Doe..." minlength="3" maxlength="15" pattern=".{3,15}" required />
+                                
+                                <p id="invalid_LastName" style="color: red"></p>
                                 @error('last_name')
                                     <p style="color: red">{{$message}}</p>
                                 @enderror
@@ -34,8 +36,9 @@
                             </div>
                             <div class="form-input">
                                 <label for="company" class="required">Company</label>
-                                <input type="text" name="company" id="company" placeholder="Ex: Techcompany..." required />
-
+                                <input type="text" name="company" id="company" placeholder="Ex: Techcompany..." minlength="3" maxlength="50" pattern=".{3,50}" required />
+                                
+                                <p id="invalid_Company" style="color: red"></p>
                                 @error('company')
                                     <p style="color: red">{{$message}}</p>
                                 @enderror
@@ -45,6 +48,7 @@
                                 <label for="email" class="required">Email</label>
                                 <input type="email" name="email" id="email" placeholder="Ex: email@email.com" required />
 
+                                <p id="invalid_Email" style="color: red"></p>
                                 @error('email')
                                     <p style="color: red">{{$message}}</p>
                                 @enderror
@@ -52,8 +56,9 @@
                             </div>
                             <div class="form-input">
                                 <label for="phone_number" class="required">Phone number</label>
-                                <input type="number" name="phone_number" id="phone_number" placeholder="Ex: 0123456789" required />
+                                <input type="text" name="phone_number" id="phone_number" placeholder="Ex: 0123456789" minlength="10" pattern=".{10,}" required />
 
+                                <p id="invalid_PhoneNumber" style="color: red"></p>
                                 @error('phone_number')
                                     <p style="color: red">{{$message}}</p>
                                 @enderror
@@ -68,12 +73,13 @@
                                 <div class="select-list">
                                     <select name="meal_preference" id="meal_preference">
                                         <option value="Vegetarian">&nbsp;</option>
-                                        <option value="Kosher">Kosher</option>
-                                        <option value="Asian Vegetarian">Asian Vegetarian</option>
+                                        <option value="Kosher">Male</option>
+                                        <option value="Asian Vegetarian">Female</option>
                                     </select>
                                 </div>
                                 <input type="hidden" name="meal_preference" id="gender" />
 
+                                <p id="invalid_Gender" style="color: red"></p>
                                 @error('meal_preference')
                                     <p style="color: red">{{$message}}</p>
                                 @enderror
@@ -103,8 +109,9 @@
                             </div>
                             <div class="form-input">
                                 <label for="chequeno" class="required">Card Number</label>
-                                <input type="number" name="chequeno" id="chequeno" placeholder="Ex: 123123123123" required />
+                                <input type="text" name="chequeno" id="chequeno" placeholder="Ex: 123123123123" maxlength="16" pattern=".{16,16}" required />
 
+                                <p id="invalid_CardNumber" style="color: red"></p>
                                 @error('chequeno')
                                     <p style="color: red">{{$message}}</p>
                                 @enderror
@@ -112,8 +119,9 @@
                             </div>
                             <div class="form-input">
                                 <label for="blank_name" class="required">Expiration</label>
-                                <input type="text" name="blank_name" id="blank_name" placeholder="Ex: Jun 2020" required />
+                                <input type="month" name="blank_name" id="blank_name" required />
 
+                                <p id="invalid_Expiration" style="color: red"></p>
                                 @error('blank_name')
                                     <p style="color: red">{{$message}}</p>
                                 @enderror
@@ -121,8 +129,9 @@
                             </div>
                             <div class="form-input">
                                 <label for="payable" class="required">CVN</label>
-                                <input type="text" name="payable" id="payable" placeholder="Ex: 789" required />
+                                <input type="text" name="payable" id="payable" placeholder="Ex: 789" maxlength="3" pattern=".{3,3}" required />
 
+                                <p id="invalid_CVN" style="color: red"></p>
                                 @error('payable')
                                     <p style="color: red">{{$message}}</p>
                                 @enderror
